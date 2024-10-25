@@ -104,7 +104,9 @@ button.nav-link{
 }
 .announcements{
   background-color: #47b7df;
-
+}
+.rule{
+  background-color: #bfa614;
 }
 .announcements_ul {
   list-style: none;
@@ -435,14 +437,35 @@ nav.mt-75 button.nav-link.active {
     list-style: none;
     padding: 0px;
     margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 ul.footer_ul li{
-  float: left;
-  width: 100%;
+  width: auto;
   height: auto;
+  position: relative;
+}
+ul.footer_ul li::after{
+  position: absolute;
+    content: "";
+    width: 1px;
+    height: 60%;
+    background-color: #fff;
+    right: 0px;
+    top: 20%;
+}
+ul.footer_ul li:nth-last-child(1)::after{
+  position: absolute;
+    content: "";
+    width: 0px;
+    height: 60%;
+    background-color: #fff;
+    right: 0px;
+    top: 20%;
 }
 ul.footer_ul li a {
-  padding: 5px 0px;
+  padding: 5px 15px;
   color: #ffffff;
   margin: 0px;
   text-decoration: none;
@@ -560,6 +583,13 @@ a#scroll {
   align-items: center;
   gap: 15px;
 }
+.disp_flex_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
 .date {
   float: left;
   padding-right: 10px;
@@ -586,7 +616,29 @@ a#scroll {
   justify-content: center;
   align-items: center;
 }
+.rule_card{
+  border: 1px solid transparent;
+  padding:10px 0px
+}
+.rule_card a{
+  color:#313131;
+  text-decoration: none;
+  font-weight:bold
+}
+.rule_card:hover {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+.rule_card:hover a {
+  color:#08c;
+}
+.panchayat{
+  background: #000;
+}
 @media (max-width:767px){
+  ul.footer_ul {
+    flex-direction: column;
+}
   .disp_flx {
     flex-direction: column;
     justify-content: flex-start;
