@@ -55,7 +55,7 @@ ul.top_h li a.active:after {
 .logo_width{
   width: auto;
 }
-.nav-link{
+#collapsibleNavbar .nav-link{
   color: #ffffff;
 }
 button.nav-link{
